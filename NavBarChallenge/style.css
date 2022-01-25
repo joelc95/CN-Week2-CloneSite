@@ -1,0 +1,178 @@
+/* Some CSS Setup - nothing to do with flexbox */
+html {
+  box-sizing: border-box;
+  /* I just changed the background to vertical
+  gradient to stop repeating tiling effect on a tall screen */
+  background: linear-gradient(0deg, #eb85ff 0%, #a6c5ff 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  /* background: linear-gradient(0deg, #2376ae 0%, #c16ecf 100%);
+  background-repeat: no-repeat; */
+}
+
+a {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: rgba(185, 185, 185, 0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+a:hover {
+  background: rgba(196, 236, 255, 0.1);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* Flex Container */
+.flex-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* I changed the colour scheme as well, sorry :^) */
+  border: 1px solid rgb(230, 227, 227);
+  border-radius: 12px;
+  backdrop-filter: blur(50px) saturate(172%);
+  -webkit-backdrop-filter: blur(9px) saturate(172%);
+  background-color: rgba(211, 216, 223, 0.25);
+  
+}
+
+.flex-nav ul li {
+  /* Select all list elements, allow its properties
+    to scale with window size */
+  flex-grow: 1;
+}
+
+@media all and (max-width: 769px) {
+  .flex-nav ul {
+    margin-left: 25%;
+    width:50%;
+    /* border: red solid 4px; */
+  }
+}
+
+/* @media all and (max-width: 800px) {
+  .social {
+    width: 25%;
+  }
+} */
+
+@media all and (max-width: 768px) {
+  html {
+    /*  This stops a scroll bar appearing when window is
+      small -- hides cutoff of background colour*/
+    overflow-y: hidden;
+  }
+  .flex-nav ul li {
+    /* This selects all the list elements of the nav bar
+      individually */
+    width: 100%;
+    /* Set width of each to 100% of parent div */
+  }
+  .flex-nav .social {
+    /* This select JUST the social list elements of
+      the nav bar individually */
+    width: 25%;
+    /* Now overwrite so their width takes up 1/4 of
+      of their row */
+  }
+}
+
+/* 
+/* Some CSS Setup - nothing to do with flexbox */
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+a {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* Flex Container */
+/* .flex-nav ul {
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-nav ul li {
+  flex-grow: 1;
+}
+
+@media all and (max-width: 1000px) {
+  .flex-nav ul li {
+    width: 50%;
+  }
+  .flex-nav .social {
+    width: 25%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .flex-nav ul li {
+    width: 100%;
+  }
+  .flex-nav .social {
+    width: 25%;
+  }
+/* } */ 
