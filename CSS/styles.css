@@ -56,6 +56,52 @@ body {
     color: white;
 }
 
+.nav-search-container {
+    display: none;
+    margin-left: 30px;
+    /* display: none; */
+    text-align: center;
+}
+
+.main-nav-search {
+    padding: 12px;
+    font-family: 'Segoe UI Light';
+    font-size: 17px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgb(236, 236, 236);
+    border-color: whitesmoke;
+    border: none;
+    width: 47vw;
+}
+
+.main-nav-search:focus {
+    outline: none;
+    background-color: white;
+    border-color: white;
+}
+
+.main-nav-search:focus + .main-nav-search-svg {
+    background-color: white
+}
+
+.main-nav-search-svg-container {
+    text-align: center;
+    line-height: 0;
+}
+
+.main-nav-search-svg {
+    display: flex;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+    fill: grey;
+    background-color: rgb(236, 236, 236);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;  
+}
+
 .upper-main {
     position:relative;
     display: flex;
@@ -85,7 +131,7 @@ body {
     color:rgb(199, 199, 199)
 }
 
-.main-nav-left {
+.main-nav-right {
     list-style: none;
     display: flex;
     /* border: thistle solid 3px; */
@@ -243,7 +289,7 @@ body {
     background-color:#232a34;
 }
 
-.main-nav-left li {
+.main-nav-right li {
     height: 24px;
     cursor: pointer;
 }
@@ -272,7 +318,7 @@ body {
     background-color: rgb(1, 102, 88);
 }
 
-#nav-left-li:hover {
+#nav-right-li:hover {
     color:rgb(199, 199, 199)
 }
 
